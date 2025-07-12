@@ -6,17 +6,18 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use App\Models\Task;
 
 class TaskReminder extends Notification
 {
     use Queueable;
-
+    protected $task;
     /**
      * Create a new notification instance.
      */
-    public function __construct()
+    public function __construct(Task $task)
     {
-        //
+        $this->task = $task;
     }
 
     /**
@@ -35,9 +36,10 @@ class TaskReminder extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->line('The introduction to the notification.')
-            ->action('Notification Action', url('/'))
-            ->line('Thank you for using our application!');
+            ->subject('Reminder Tugas')
+            ->line('Tugas: ' . $this->task->title)
+            ->line('Deadline: ' . $this->task->due_date)
+            ->action('Lihat Tugas', url('/'));
     }
 
     /**
