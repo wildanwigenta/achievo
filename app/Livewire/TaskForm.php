@@ -26,7 +26,7 @@ class TaskForm extends Component
 
         session()->flash('success', 'Tugas berhasil ditambahkan');
         $this->reset();
-        $this->emit('taskUpdated');
+        $this->dispatch('taskUpdated');
     }
 
     public function render()
