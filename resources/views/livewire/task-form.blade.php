@@ -12,7 +12,7 @@
         <textarea wire:model="description" placeholder="Deskripsi (Opsional)" class="w-full border px-3 py-2 rounded"></textarea>
         @error('description') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
 
-        <input type="datetime-local" wire:model="due_date" class="w-full border px-3 py-2 rounded">
+        <input type="datetime-local" wire:model="due_date" class="w-full border px-3 py-2 rounded" placeholder="tenggat waktu">
         @error('due_date') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
 
         <select wire:model="priority" class="w-full border px-3 py-2 rounded">
