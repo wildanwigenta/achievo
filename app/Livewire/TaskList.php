@@ -8,17 +8,30 @@ class TaskList extends Component
 {
     public $tasks;
 
-    protected $listeners = ['taskUpdated' => 'mount'];
+    protected $listeners = ['taskUpdated' => 'loadTasks'];
 
     public function mount()
     {
-        $this->tasks = Task::orderBy('order')->get();
+        $this->loadTasks();
+    }
+
+    public function loadTasks()
+    {
+        $this->tasks = Task::orderBy('order')->orderBy('due_date')->get();
     }
 
     public function delete($id)
     {
-        Task::find($id)->delete();
-        $this->mount();
+        Task::findOrFail($id)->delete();
+        $this->loadTasks();
+    }
+
+    public function toggleStatus($id)
+    {
+        $task = Task::findOrFail($id);
+        $task->status = !$task->status;
+        $task->save();
+        $this->loadTasks();
     }
 
     public function render()
