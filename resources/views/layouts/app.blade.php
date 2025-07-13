@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Todo List App</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js']) 
+    <title> Achievo </title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
 <body class="bg-gray-100 min-h-screen flex justify-center items-start p-6">
