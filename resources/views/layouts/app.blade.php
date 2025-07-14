@@ -8,7 +8,7 @@
 </head>
 <body class="bg-gray-100 min-h-screen flex justify-center items-start p-6">
     <div class="w-full max-w-2xl bg-white shadow-md rounded-lg p-6">
-        <h1 class="text-2xl font-bold mb-6">Todo List</h1>
+        {{-- <h1 class="text-2xl font-bold mb-6">Todo List</h1> --}}
         @yield('content')
     </div>
     @livewireScripts

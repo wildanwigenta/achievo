@@ -10,6 +10,9 @@ use Livewire\Volt\Volt;
 Route::get('/', function () {
     return view('tasks.index');
 });
+Route::get('tasks', function () {
+    return view('tasks.add_tugas');
+})->name('tasks.add_tugas');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

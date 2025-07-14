@@ -15,6 +15,7 @@
             </div>
 
             <button wire:click="delete({{ $task->id }})" class="text-red-600 hover:text-red-800 text-sm">Hapus</button>
+
         </div>
     @empty
         <p class="text-gray-600 text-center">Belum ada tugas.</p>
