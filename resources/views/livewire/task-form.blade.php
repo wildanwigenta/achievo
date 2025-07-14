@@ -1,41 +1,55 @@
 <div>
     @if (session()->has('success'))
-        <div class="bg-green-200 text-green-800 px-4 py-2 rounded mb-3">
+        <div class="bg-green-100 border border-green-300 text-green-800 px-4 py-3 rounded mb-4">
             {{ session('success') }}
         </div>
     @endif
 
-    <form wire:submit.prevent="store" class="space-y-3">
-        <label for="">Judul Tugas:</label>
-        <input type="text" wire:model="title" class="w-full border px-3 py-2 rounded">
-        @error('title') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
-        <br>
-        <label for="">Deskripsi Tugas:</label>
-        <textarea wire:model="description" placeholder="Deskripsi (Opsional)" class="w-full border px-3 py-2 rounded"></textarea>
-        @error('description') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
-        <br>
-        <label for="">Tanggal Jatuh Tempo:</label>
-        <input type="datetime-local" wire:model="due_date" class="w-full border px-3 py-2 rounded" >
-        @error('due_date') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
-        <br>
-        <label for="">Prioritas:</label>
-        <select wire:model="priority" class="w-full border px-3 py-2 rounded">
-            <option value="">Pilih Prioritas</option>
-            <option value="low">Rendah</option>
-            <option value="medium">Sedang</option>
-            <option value="high">Tinggi</option>
-        </select>
-        @error('priority') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
-        <br>
-        <label for="">Kategori:</label>
-        <input type="text" wire:model="category" placeholder="Kategori (Opsional)" class="w-full border px-3 py-2 rounded">
-        @error('category') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
-        <div class="flex justify-between mt-2">
-            <a href="{{ route('tasks.index') }}" class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-600 rounded hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-                Daftar Tugas
-            </a>
-            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Tambah +</button>
+    <form wire:submit.prevent="store" class="space-y-4">
+        <div>
+            <label class="font-medium">Judul Tugas</label>
+            <input type="text" wire:model="title" class="w-full border border-gray-300 px-3 py-2 rounded focus:ring-2 focus:ring-blue-400">
+            @error('title') <p class="text-red-600 text-sm mt-1">{{ $message }}</p> @enderror
         </div>
-       
+
+        <div>
+            <label class="font-medium">Deskripsi Tugas</label>
+            <textarea wire:model="description" rows="3" class="w-full border border-gray-300 px-3 py-2 rounded focus:ring-2 focus:ring-blue-400" placeholder="Deskripsi (Opsional)"></textarea>
+            @error('description') <p class="text-red-600 text-sm mt-1">{{ $message }}</p> @enderror
+        </div>
+
+        <div>
+            <label class="font-medium">Tanggal Jatuh Tempo</label>
+            <input type="datetime-local" wire:model="due_date" class="w-full border border-gray-300 px-3 py-2 rounded focus:ring-2 focus:ring-blue-400">
+            @error('due_date') <p class="text-red-600 text-sm mt-1">{{ $message }}</p> @enderror
+        </div>
+
+        <div>
+            <label class="font-medium">Prioritas</label>
+            <select wire:model="priority" class="w-full border border-gray-300 px-3 py-2 rounded focus:ring-2 focus:ring-blue-400">
+                <option value="">Pilih Prioritas</option>
+                <option value="low">Rendah</option>
+                <option value="medium">Sedang</option>
+                <option value="high">Tinggi</option>
+            </select>
+            @error('priority') <p class="text-red-600 text-sm mt-1">{{ $message }}</p> @enderror
+        </div>
+
+        <div>
+            <label class="font-medium">Kategori</label>
+            <input type="text" wire:model="category" class="w-full border border-gray-300 px-3 py-2 rounded focus:ring-2 focus:ring-blue-400" placeholder="Kategori (Opsional)">
+            @error('category') <p class="text-red-600 text-sm mt-1">{{ $message }}</p> @enderror
+        </div>
+
+        <div class="flex justify-between mt-6">
+            <a href="{{ route('tasks.index') }}"
+                class="text-gray-700 border border-gray-300 px-4 py-2 rounded hover:bg-gray-200 transition">
+                ← Daftar Tugas
+            </a>
+            <button type="submit"
+                class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+                Tambah +
+            </button>
+        </div>
     </form>
 </div>
