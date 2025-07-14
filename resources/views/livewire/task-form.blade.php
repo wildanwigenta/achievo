@@ -30,7 +30,12 @@
         <label for="">Kategori:</label>
         <input type="text" wire:model="category" placeholder="Kategori (Opsional)" class="w-full border px-3 py-2 rounded">
         @error('category') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
-        
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Tambah Tugas</button>
+        <div class="flex justify-between mt-2">
+            <a href="{{ route('tasks.index') }}" class="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-600 rounded hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                Daftar Tugas
+            </a>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Tambah +</button>
+        </div>
+       
     </form>
 </div>
