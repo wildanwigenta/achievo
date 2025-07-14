@@ -22,8 +22,8 @@ Achievo adalah aplikasi Todo List sederhana yang dibangun menggunakan **Laravel 
 
 ## 🧰 Teknologi yang Digunakan
 
-- [Laravel 11](https://laravel.com)
-- [Livewire 3.x](https://livewire.laravel.com)
+- [Laravel 12](https://laravel.com)
+- [Livewire 3](https://livewire.laravel.com)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Vite](https://vitejs.dev)
 - PHP 8.1+
