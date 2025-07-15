@@ -10,7 +10,9 @@ Route::get('/', function () {
 Route::get('tasks', function () {
     return view('tasks.add_tugas');
 })->name('tasks.add_tugas');
-Route::get('tasks/edit/{id}', \App\Livewire\TaskEdit::class)->name('tasks.edit');
+Route::get('tasks/edit/{id}', function ($id) {
+    return view('tasks.edit_tugas', ['id' => $id]);
+})->name('tasks.edit_tugas');
 
 // Route::view('dashboard', 'dashboard')
 //     ->middleware(['auth', 'verified'])

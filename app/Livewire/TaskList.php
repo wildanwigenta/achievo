@@ -26,10 +26,7 @@ class TaskList extends Component
         $this->loadTasks();
     }
 
-    public function edit($id)
-    {
-        
-    }
+   
 
     public function toggleStatus($id)
     {
