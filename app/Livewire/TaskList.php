@@ -28,8 +28,7 @@ class TaskList extends Component
 
     public function edit($id)
     {
-        $task = Task::findOrFail($id);
-        $this->dispatch('editTask', $task);
+        
     }
 
     public function toggleStatus($id)
