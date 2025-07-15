@@ -39,13 +39,13 @@ class TaskEdit extends Component
         ]);
 
         session()->flash('success', 'Tugas berhasil diperbarui.');
-        return redirect()->route('tasks.index');
+        // return redirect()->route('tasks.index');
     }
 
     public function render()
     {
         return view('livewire.task-edit');
-        
+
     }
 }
 

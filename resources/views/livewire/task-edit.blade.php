@@ -5,8 +5,6 @@
         </div>
     @endif
 
-    <h1 class="text-3xl font-bold text-gray-800 mb-6">Edit Tugas</h1>
-
     <form wire:submit.prevent="update" class="space-y-4">
         
         <div>

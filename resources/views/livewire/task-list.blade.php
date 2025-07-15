@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="ml-5 flex flex-col items-end gap-2">
-                <a href="{{ route('tasks.edit-tugas', $task->id) }}" class="text-blue-500 hover:text-blue-700 text-sm">Edit</a>
+                <a href="{{ route('tasks.edit_tugas', $task->id) }}" class="text-blue-500 hover:text-blue-700 text-sm">Edit</a>
                 <button wire:click="delete({{ $task->id }})" class="text-red-500 hover:text-red-700 text-sm">Hapus</button>
             </div>
         </div>
