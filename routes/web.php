@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
-
 Route::get('/', function () {
     return view('tasks.index');
 })->name('tasks.index');
