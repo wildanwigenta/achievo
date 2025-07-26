@@ -17,7 +17,6 @@ Achievo adalah aplikasi Todo List sederhana yang dibangun menggunakan **Laravel 
 - Status tugas (selesai/belum) dengan checkbox
 - Pemberitahuan sukses
 - Komponen Livewire real-time tanpa reload
-
 ---
 
 ## 🧰 Teknologi yang Digunakan
