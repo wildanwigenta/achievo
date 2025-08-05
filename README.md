@@ -3,7 +3,6 @@
 Achievo adalah aplikasi Todo List sederhana yang dibangun menggunakan **Laravel 11** dan **Livewire**. Aplikasi ini memungkinkan pengguna untuk menambahkan, melihat, dan menghapus tugas harian dengan fitur prioritas, kategori, dan deadline.
 
 ---
-
 ## 🚀 Fitur Utama
 
 - CRUD tugas (Create, Read, Delete)
