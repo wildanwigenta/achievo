@@ -35,4 +35,3 @@ class TaskForm extends Component
     }
 
 }
-
