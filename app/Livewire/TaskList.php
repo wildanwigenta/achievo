@@ -27,7 +27,6 @@ class TaskList extends Component
     }
 
 
-
     public function toggleStatus($id)
     {
         $task = Task::findOrFail($id);
