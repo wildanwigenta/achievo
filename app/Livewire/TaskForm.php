@@ -33,5 +33,6 @@ class TaskForm extends Component
     {
         return view('livewire.task-form');
     }
-    
+
 }
+
