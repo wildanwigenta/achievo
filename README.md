@@ -36,4 +36,4 @@ Achievo adalah aplikasi Todo List sederhana yang dibangun menggunakan **Laravel 
 1. **Clone Repository:**
    ```bash
    git clone https://github.com/username/achievo-todolist.git
-   cd achievo-todolist
+   cd achievo
