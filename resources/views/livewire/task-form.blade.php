@@ -34,7 +34,6 @@
             </select>
             @error('priority') <p class="text-red-600 text-sm mt-1">{{ $message }}</p> @enderror
         </div>
-
         <div>
             <label class="font-medium">Kategori</label>
             <input type="text" wire:model="category" class="w-full border border-gray-300 px-3 py-2 rounded focus:ring-2 focus:ring-blue-400" placeholder="Kategori (Opsional)">
